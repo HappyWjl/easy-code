@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Generator:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/Generator_jar</output-path>
+    <root id="archive" name="Generator.jar">
+      <element id="module-output" name="easy-code" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/log4j-1.2.17.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/mysql-connector-java-5.1.7-bin.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/freemarker.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

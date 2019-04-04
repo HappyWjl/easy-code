@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+     <comment>
+          代码生成器配置文件:
+     </comment>
+     <entry key="basePackage">com.easy.autocoding</entry>
+     <entry key="outRoot"></entry>
+
+     <!-- 需要移除的表名前缀,使用逗号进行分隔多个前缀,
+     比如表名：tb_article，想将表名前缀移除，填入值：tb_ -->
+     <entry key="tableRemovePrefixes"/>
+
+     <!-- 数据库类型映射  -->
+     <entry key="CHAR">String</entry>
+     <entry key="VARCHAR">String</entry>
+     <entry key="LONGVARCHAR">String</entry>
+     <entry key="TINYINT">Integer</entry>
+     <entry key="TINYINT UNSIGNED">Integer</entry>
+     <entry key="NUMERIC">Double</entry>
+     <entry key="DECIMAL">java.math.BigDecimal</entry>
+     <entry key="BIGINT">Long</entry>
+     <entry key="BIGINT UNSIGNED">Long</entry>
+     <entry key="REAL">Double</entry>
+     <entry key="SMALLINT">Integer</entry>
+     <entry key="INTEGER">Integer</entry>
+     <entry key="INTEGER UNSIGNED">Integer</entry>
+     <entry key="INT">Integer</entry>
+     <entry key="INT UNSIGNED">Integer</entry>
+     <entry key="DATE">java.util.Date</entry>
+     <entry key="TIME">java.util.Date</entry>
+     <entry key="DATETIME">java.util.Date</entry>
+     <entry key="TIMESTAMP">java.util.Date</entry>
+     <entry key="BIT">Boolean</entry>
+
+     <!-- 账号密码 -->
+     <entry key="jdbc.username">root</entry>
+     <entry key="jdbc.password">root</entry>
+
+     <!-- MySQL -->
+     <entry key="jdbc.url">jdbc:mysql://localhost:3306/db_search?useUnicode=true&amp;characterEncoding=UTF8</entry>
+     <entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
+
+     <!-- H2
+     <entry key="jdbc.url">jdbc:h2:tcp://localhost/test</entry>
+     <entry key="jdbc.driver">org.h2.Driver</entry>
+     -->
+
+     <!-- Oracle      jdbc:oracle:oci:@tnsname_devdb
+     <entry key="jdbc.schema"/>
+     <entry key="jdbc.catalog"/>
+
+     <entry key="jdbc.url">jdbc:oracle:thin:@192.168.0.177:1521:[sid]</entry>
+     <entry key="jdbc.driver">oracle.jdbc.driver.OracleDriver</entry>
+     -->
+
+     <!-- SQLServer2000 
+     <entry key="jdbc.url">jdbc:microsoft:sqlserver://localhost:1433;DatabaseName=[database]</entry>
+     <entry key="jdbc.driver">com.microsoft.jdbc.sqlserver.SQLServerDriver</entry>
+     -->
+
+     <!-- SQLServer2005 
+     <entry key="jdbc.url">jdbc:sqlserver://192.168.0.98:1433;DatabaseName=[database]</entry>
+     <entry key="jdbc.driver">com.microsoft.sqlserver.jdbc.SQLServerDriver</entry>
+     -->
+
+     <!-- JTDs for SQLServer 
+     <entry key="jdbc.url">jdbc:jtds:sqlserver://192.168.0.102:1433/[database];tds=8.0;lastupdatecount=true</entry>
+     <entry key="jdbc.driver">net.sourceforge.jtds.jdbc.Driver</entry>
+     -->
+
+     <!-- PostgreSql
+     <entry key="jdbc.url">jdbc:postgresql://localhost/[database]</entry>
+     <entry key="jdbc.driver">org.postgresql.Driver</entry>
+     -->
+
+     <!-- Sybase
+     <entry key="jdbc.url">jdbc:sybase:Tds:localhost:5007/[database]</entry>
+     <entry key="jdbc.driver">com.sybase.jdbc.SybDriver</entry>
+     -->
+
+     <!-- DB2 
+     <entry key="jdbc.url">jdbc:db2://localhost:5000/[database]</entry>
+     <entry key="jdbc.driver">com.ibm.db2.jdbc.app.DB2Driver</entry>
+     -->
+
+     <!-- HsqlDB 
+     <entry key="jdbc.url">jdbc:hsqldb:mem:generatorDB</entry>
+     <entry key="jdbc.driver">org.hsqldb.jdbcDriver</entry>
+     -->
+
+     <!-- Derby 
+     <entry key="jdbc.url">jdbc:derby://localhost/databaseName</entry>
+     <entry key="jdbc.driver">org.apache.derby.jdbc.ClientDriver</entry>     
+     -->
+</properties>

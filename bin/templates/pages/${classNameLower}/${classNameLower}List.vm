@@ -1,0 +1,82 @@
+﻿${ r'#set($staticPath="$request.contextPath/assets")'}
+${ r'#set($rootPath="$request.scheme://"+"$request.serverName:"+"$request.serverPort")'}
+${ r'#set($layout = "/seller_layout.vm")'}
+<script type="text/javascript">
+	$(function(){
+		//加载左侧菜单
+		$("#leftSeller").load("$request.contextPath/leftSeller");
+	})
+	
+	//到指定的分页页面
+	function topage(page){
+		$("#page").val(page);
+		$("#searchForm").submit();
+	}
+</script>
+<div id="main">
+<!--中间部分开始-->
+<div id="leftSeller" class="border-4">
+</div><!--left end -->
+<!--右边部分开始-->
+<div id="right">
+    <div id="right_top" class="right_top border-4 bg_06">
+	<form method="post" id="searchForm" action="$request.contextPath/sellcenter/${classNameLower}/find${classNameLower}sByPage">
+		<input type="hidden" name="page" id="page" />
+		<div class="right_top_l" style="margin-top: 40px">
+			<ul class="list">
+				<#list table.columns as column>
+					<li class="wid_220">
+						<span class="font_wid">${column.label}：</span><input class="input_Style2 wid_120 hei_30" type="text" name="${column.name}" value="$!${classNameLower}DTO.${column.name}"/>
+					</li>
+				</#list>
+			</ul>
+		</div>
+    </form>
+		<div class="right_top_r ">
+			<button type="button" class="button_4 but_cx1" onclick="topage(1);">
+				<a class="font_1c hei_24">查 询</a>
+			</button>
+		</div>
+	</div>
+	<!-- right结束 -->
+
+	<div id="right_bot" class="right_bot border-4 mar_t10 bg_06">
+    <!-- 商品列表开头 -->
+		<div class="right_xinxi mar_l14">
+
+			<ul class="list_top bg_08 font_14b">
+				<li class="wid_100 font_cen hei_35">自定义</li>
+				<li class="wid_100 font_cen hei_35">自定义</li>
+				<li class="wid_100 font_cen hei_35">自定义</li>
+				<li class="wid_100 font_cen hei_35">操作</li>
+			</ul>
+			 <ul class="right_select">
+		        <li><input type="checkbox" class="mar_l10 hei_22" id="all_select"/>全选</li>
+		        <li><button type="button" class="button_4 mar_l10 hei_24" onclick="publishMore(2);"><a class="font_1c" >批量删除</a></button></li>
+		        <span class="fr mar_tb10"><button type="button" class="button_4  hei_24 " onclick="addNewGoods();"><a class="font_1c">+添加新商品</a></button></span>
+		      </ul>
+      <!-- 商品信息 -->
+      <table class="information" id="information ">
+		${ r' #foreach($entity in $pager.records) '}
+		<tr>
+		  <td class="wid_120 hei_60 border-1 border-12" >
+            <input type="checkbox" value="$!entity.id" name="id" />
+          </td>
+          <td class="wid_100 border-1 font_cen">${ r'$!entity.id'}</td>
+          <td class="wid_100 border-1 font_cen">${ r'$!entity.id'}</td>
+          <td class="wid_100 border-1 font_cen">${ r'$!entity.id'}</td>
+          <td class="wid_100 border-1 font_cen">
+          	 <a class="font_1c" style="cursor:pointer" onclick="pseudoDelete($!goods.itemId);">删除</a>
+	         <br/>
+          </td>
+		</tr>
+		${ r'#end'}
+      </table>
+      ${ r' #pageVelocity($pager) '}
+      <div class="clear"></div>
+	  </div>
+	</div>
+      
+</div> <!--id="right" end--> 
+<!--右边部分结束-->
+</div><!--#main end -->
