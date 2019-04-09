@@ -4,7 +4,9 @@
      <comment>
           代码生成器配置文件:
      </comment>
+     <!-- 生成的包名 -->
      <entry key="basePackage">com.easy.autocoding</entry>
+     <!-- 输出路径，不填生成到桌面 -->
      <entry key="outRoot"></entry>
 
      <!-- 需要移除的表名前缀,使用逗号进行分隔多个前缀,
