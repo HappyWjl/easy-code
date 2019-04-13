@@ -3,6 +3,7 @@ package ${package}.service.impl;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
@@ -10,7 +11,6 @@ import ${package}.model.Page;
 import ${package}.dao.${className}Dao;
 import ${package}.model.${className}Model;
 import ${package}.service.${className}Service;
-import com.lxmall.mainframe.utils.ParamValidateUtils;
 
 /** 
  * Description: [${table.tableDesc}服务实现]
@@ -31,7 +31,7 @@ public class ${className}ServiceImpl implements ${className}Service {
 	/**
 	 * <p>Discription:[${table.tableDesc}数据分页查询]</p>
 	 * Created on ${date}
-	 * @param pager ${table.tableDesc}数据分页条件
+	 * @param page ${table.tableDesc}数据分页条件
 	 * @param ${classNameLower}Model ${table.tableDesc}数据查询条件
 	 * @param queryFields ${table.tableDesc}数据查询字段
 	 * @return List<${className}Model>分页数据
@@ -44,11 +44,11 @@ public class ${className}ServiceImpl implements ${className}Service {
 		List<${className}Model> list${className} = new ArrayList<${className}Model>();
 		try{
 			//判断参数是否为空
-			if(ParamValidateUtils.isEmpty(page)){
+			if(Objects.isNull(page)){
 				return null;
 			}else{
 				List<String> lis = new ArrayList<String>();
-				if(ParamValidateUtils.isEmpty(queryFields)){
+				if(Objects.isNull(queryFields)){
 					lis = null;
 				}else{
 					lis = Arrays.asList(queryFields.split(","));
@@ -74,7 +74,7 @@ public class ${className}ServiceImpl implements ${className}Service {
 		List<${className}Model> list${className} = new ArrayList<${className}Model>();
 		try{
 			List<String> lis = new ArrayList<String>();
-			if(ParamValidateUtils.isEmpty(queryFields)){
+			if(Objects.isNull(queryFields)){
 				lis = null;
 			}else{
 				lis = Arrays.asList(queryFields.split(","));
@@ -111,11 +111,11 @@ public class ${className}ServiceImpl implements ${className}Service {
 	 * @return ${className}Model 单条数据	 
 	 * @author:${author}
 	 */
-	public ${className}Model query${className}ById(String id){
+	public ${className}Model query${className}ById(Long id){
 		
 		${className}Model model = new ${className}Model();
 		try{
-			if(ParamValidateUtils.isEmpty(id)){
+			if(Objects.isNull(id)){
 				return null;
 			}else{
 				model = this.${classNameLower}Dao.query${className}ById(id,null);
@@ -137,7 +137,7 @@ public class ${className}ServiceImpl implements ${className}Service {
 	public int save(${className}Model ${classNameLower}Model){
 		int count = 0;
 		try{
-			if(ParamValidateUtils.isEmpty(${classNameLower}Model)){
+			if(Objects.isNull(${classNameLower}Model)){
 				return 0;
 			}else{
 				count = this.${classNameLower}Dao.add${className}(${classNameLower}Model);
@@ -160,7 +160,7 @@ public class ${className}ServiceImpl implements ${className}Service {
 	public int edit(${className}Model ${classNameLower}Model){
 		Integer count = 0;
 		try{
-			if(ParamValidateUtils.isEmpty(${classNameLower}Model) || ParamValidateUtils.isEmpty(${classNameLower}Model.get${modelIdFirstUpper}())){
+			if(Objects.isNull(${classNameLower}Model) || Objects.isNull(${classNameLower}Model.get${modelIdFirstUpper}())){
 				return 0;
 			}else{
 				count = this.${classNameLower}Dao.update${className}(${classNameLower}Model);
@@ -179,10 +179,10 @@ public class ${className}ServiceImpl implements ${className}Service {
 	 *								   
 	 * @author:${author}
 	 */
-	public int remove${className}ById(String id){
+	public int remove${className}ById(Long id){
 		Integer count = 0;
 		try{
-			if(ParamValidateUtils.isEmpty(id)){
+			if(Objects.isNull(id)){
 				return 0;
 			}else{
 				count = this.${classNameLower}Dao.remove${className}ById(id);
@@ -204,7 +204,7 @@ public class ${className}ServiceImpl implements ${className}Service {
 	public int remove${className}ByIds(String ids){
 		Integer count = 0;
 		try{
-			if(ParamValidateUtils.isEmpty(ids)){
+			if(Objects.isNull(ids)){
 				return 0;
 			}else{
 				List<String> lis = Arrays.asList(ids.split(","));

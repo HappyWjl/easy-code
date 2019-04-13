@@ -32,7 +32,7 @@ public interface ${className}Dao{
 	/**
 	* 查询单个实体
 	*/
-	${className}Model query${className}ById(@Param("id")String id,  @Param("queryFields")List queryFields);
+	${className}Model query${className}ById(@Param("id")Long id,  @Param("queryFields")List queryFields);
 	
 	/**
 	* 新增
@@ -52,6 +52,6 @@ public interface ${className}Dao{
 	/**
 	* 删除
 	*/
-	int remove${className}ById(@Param("id")String id);
+	int remove${className}ById(@Param("id")Long id);
 
 }

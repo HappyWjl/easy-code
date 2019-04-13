@@ -197,13 +197,13 @@ public class EasyCodeApplication {
         long time = System.currentTimeMillis();
         EasyCodeApplication g = new EasyCodeApplication();
         Map<String, String> map = new HashMap<String, String>();
-        map.put("tb_article", "文章表");
+        map.put("tb_wx_user_info", "微信用户表");
 
         Iterator<Map.Entry<String, String>> it = map.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry<String, String> e = it.next();
             //设置数据库主键字段
-            g.gen(e.getKey(), e.getValue(), "id", "Id");
+            g.gen(e.getKey(), e.getValue(), "id", "id");
         }
         System.out.println("-------------------模版文件生成完毕，时间：" + (System.currentTimeMillis() - time) + "毫秒 ----------------!!!");
     }

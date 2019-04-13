@@ -54,7 +54,7 @@ public interface ${className}Service {
 	 * @return ${className}Model 单条数据	 
 	 * @author:${author}
 	 */
-	public ${className}Model query${className}ById(String id);
+	public ${className}Model query${className}ById(Long id);
 
 	/**
 	 * <p>Discription:[${table.tableDesc}数据新增]</p>
@@ -81,7 +81,7 @@ public interface ${className}Service {
 	 * @return 成功条数 	
 	 * @author:${author}
 	 */
-	public int remove${className}ById(String id);
+	public int remove${className}ById(Long id);
 	
 	/**
 	 * <p>Discription:[${table.tableDesc}数据批量删除]</p>

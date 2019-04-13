@@ -5,7 +5,7 @@
           代码生成器配置文件:
      </comment>
      <!-- 生成的包名 -->
-     <entry key="basePackage">com.easy.autocoding</entry>
+     <entry key="basePackage">com.common.api</entry>
      <!-- 输出路径，不填生成到桌面 -->
      <entry key="outRoot"></entry>
 
@@ -40,7 +40,7 @@
      <entry key="jdbc.password">root</entry>
 
      <!-- MySQL -->
-     <entry key="jdbc.url">jdbc:mysql://localhost:3306/db_search?useUnicode=true&amp;characterEncoding=UTF8</entry>
+     <entry key="jdbc.url">jdbc:mysql://localhost:3306/db_common?useUnicode=true&amp;characterEncoding=UTF8</entry>
      <entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
 
      <!-- H2

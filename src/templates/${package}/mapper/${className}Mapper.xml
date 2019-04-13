@@ -53,7 +53,7 @@
 	</sql>
 	
 	<sql id="time_sort">
-		order by createtime desc 
+		order by create_time desc
 	</sql>
 
 	<!-- 分页查询数据集合-->
