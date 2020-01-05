@@ -1,0 +1,13 @@
+
+O
+squid:S106—"9Replace this use of System.out or System.err by a logger.(ê¨ :
+P
+squid:S106»"9Replace this use of System.out or System.err by a logger.(ëê†•
+]squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ãéò,
+_squid:S2095>"HUse try-with-resources or close this "Connection" in a "finally" clause.(ÂÇŒ‡
+O
+squid:S106Ğ"9Replace this use of System.out or System.err by a logger.(‹«
+|squid:S1149’"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(¨âàøÿÿÿÿ
+^squid:S00112+"FDefine and throw a dedicated exception instead of using a generic one.(ÂÛæŠ
+osquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Çêóƒÿÿÿÿÿ
+jsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­¹µä

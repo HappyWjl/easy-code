@@ -34,13 +34,14 @@
      <entry key="DATETIME">java.util.Date</entry>
      <entry key="TIMESTAMP">java.util.Date</entry>
      <entry key="BIT">Boolean</entry>
+     <entry key="DOUBLE">Double</entry>
 
      <!-- 账号密码 -->
      <entry key="jdbc.username">root</entry>
      <entry key="jdbc.password">root</entry>
 
      <!-- MySQL -->
-     <entry key="jdbc.url">jdbc:mysql://localhost:3306/db_common?useUnicode=true&amp;characterEncoding=UTF8</entry>
+     <entry key="jdbc.url">jdbc:mysql://localhost:3306/db_common_shop?useUnicode=true&amp;characterEncoding=UTF8</entry>
      <entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
 
      <!-- H2

@@ -197,7 +197,7 @@ public class EasyCodeApplication {
         long time = System.currentTimeMillis();
         EasyCodeApplication g = new EasyCodeApplication();
         Map<String, String> map = new HashMap<String, String>();
-        map.put("tb_wx_user_info", "微信用户表");
+        map.put("tb_classify", "商品类型表");
 
         Iterator<Map.Entry<String, String>> it = map.entrySet().iterator();
         while (it.hasNext()) {
